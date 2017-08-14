@@ -70,10 +70,13 @@ setup(
 #     long_description=read("READM.rst"),
     long_description = long_desc,
     author='Jimmy Liu',
+    install_requires={
+        'pandas>=0.20', 'numpy>=1.12.0', 'scipy>=0.19.0','matplotlib>=2.0.2','lxml>=3.4.0','pytesseract>=0.1.7'
+    },
     author_email='jimmysoa@sina.cn',
     license='BSD',
     url='http://tushare.org',
-    keywords='china stock data',
+    keywords='China stock data',
     classifiers=['Development Status :: 4 - Beta',
     'Programming Language :: Python :: 2.6',
     'Programming Language :: Python :: 2.7',
@@ -81,6 +84,7 @@ setup(
     'Programming Language :: Python :: 3.3',
     'Programming Language :: Python :: 3.4',
     'License :: OSI Approved :: BSD License'],
-    packages=['tushare','tushare.stock','tushare.data','tushare.util'],
+    packages=['tushare','tushare.stock', 'tushare.data', 'tushare.util', 'tushare.datayes',
+              'tushare.internet', 'tushare.fund', 'tushare.trader', 'tushare.futures'],
     package_data={'': ['*.csv']},
 )
